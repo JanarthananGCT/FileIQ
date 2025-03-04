@@ -1,4 +1,4 @@
-# 🚀 SparrowIQ Frontend Templates
+# 🚀 SparrowIQ
 
 A powerful library for intelligent document processing and validation, featuring the advanced SparrowIQ .
 
@@ -14,15 +14,15 @@ A powerful library for intelligent document processing and validation, featuring
 ## 🔧 Installation
 
 ```bash
-npm install @sparrowengg/frontend-templates
+npm i sparrow-iq
 # or
-yarn add @sparrowengg/frontend-templates
+yarn add sparrow-iq
 ```
 
 ## 🚀 Quick Start
 
 ```jsx
-import { SparrowIQ } from '@sparrowengg/frontend-templates';
+import { SparrowIQ } from 'sparrow-iq';
 
 const App = () => {
   const iq = new SparrowIQ({
@@ -33,12 +33,8 @@ const App = () => {
       GENERATE_URL: 'YOUR_GENERATE_URL'
     }
   });
-
-  return (
-    <div>
-      {/* Your implementation */}
-    </div>
-  );
+  iq.validateFileType(FILE)
+  iq.parseFile(FILE)
 };
 ```
 
@@ -61,6 +57,7 @@ const App = () => {
 - `updateEntities(entities: SparrowIQEntity[])`: Updates the entities for extraction
 - `validateState()`: Validates the current state of the component
 - `validateFile(fileBase64: string)`: Validates the file content
+- `parseFile(file)`: parse the file content
 
 ## 🔐 Security
 
